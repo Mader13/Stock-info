@@ -69,12 +69,10 @@ let tech_analysis = `<div class="ticker-tech-analysis">
         document.body.appendChild(script);
         document.body.removeChild(script);
 
-        
         var script= document.createElement('script');
         script.src= "https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js"
         document.body.appendChild(script);
         document.body.removeChild(script);
-
 
         var script= document.createElement('script');
         script.src= "https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
@@ -84,7 +82,6 @@ let tech_analysis = `<div class="ticker-tech-analysis">
 }
 
 document.getElementById("submitBtn").addEventListener("click", submitStocks); 
-
 const checkboxTheme = document.getElementById('changeTheme');
 checkboxTheme.addEventListener('change', () => {
     document.body.classList.toggle('dark');
