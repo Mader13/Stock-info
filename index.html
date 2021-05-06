@@ -11,8 +11,17 @@
 
 <body>
     <header>
+        <div class="ToggleColorTheme">
+            <input type="checkbox" id="changeTheme" class="changeTheme">
+                <label for="changeTheme" class="labelTheme">
+                    <i class="ThemeDark">&#127774;</i> 
+                    <i class="ThemeSun">&#127770;</i> 
+                    <div class="ThemeBall"></div>
+                </label>
+        </div>
         <h2>Stock Info</h2>
         <span>Быстрый просмотр основной информации акции по тикеру</span>
+        
     </header>
     <div class="Financial-content">
         <div class="input-And-Other-Info">
@@ -23,7 +32,7 @@
                     <span class="content-ticker">Ticker</span>
                     </label>
                 </div>
-                <button id="submitBtn" ">Поиск</button>
+                <button id="submitBtn">Поиск</button>
             </div>
             
             <div id="place_for_mini"><div  id="t-info" class="ticker-info">

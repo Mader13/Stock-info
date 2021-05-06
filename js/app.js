@@ -1,5 +1,4 @@
 
-document.getElementById("submitBtn").addEventListener("click", submitStocks); 
 
 function submitStocks(){
     let stock = document.getElementById("ticker-value").value;
@@ -84,4 +83,9 @@ let tech_analysis = `<div class="ticker-tech-analysis">
 
 }
 
+document.getElementById("submitBtn").addEventListener("click", submitStocks); 
 
+const checkboxTheme = document.getElementById('changeTheme');
+checkboxTheme.addEventListener('change', () => {
+    document.body.classList.toggle('dark');
+});

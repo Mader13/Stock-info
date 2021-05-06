@@ -483,8 +483,14 @@ textarea {
 }
 
 /* End of styles reset */
+body {
+background-color: #fff;
+}
 
-
+body.dark {
+background-color: rgb(90, 90, 90);
+color: #fff;
+}
 header {
     text-align: center;
     height: 140px;
@@ -500,6 +506,50 @@ header span {
     font-size: 1.2em;
     margin: 10px 0 20px 0;
     font-family: "Lora-Regular", sans-serif;
+}
+.ToggleColorTheme{
+    position:absolute;
+    padding-left: 10px;
+}
+.labelTheme {
+    background-color: #111;
+    position: relative;
+    display: flex;
+    border-radius: 50px;
+    height: 22px;
+    width: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.ThemeDark{
+    color: #f1c40f;
+}
+.ThemeSun{
+    color: #f39c12;
+}
+.changeTheme {
+    opacity: 0;
+    position: absolute;
+}
+
+
+
+.ThemeBall {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    transition: transform 0.1s linear;
+}
+
+.changeTheme:checked + .labelTheme .ThemeBall {
+    transform: translateX(28px);
+    background-color: #fff;
 }
 
 .Financial-content {
@@ -531,12 +581,19 @@ margin-bottom: 30px;
 }
 
 #submitBtn{
+    background-color: rgb(33, 150, 243, 0.10);
+    border: 1px solid;
+    border-radius: 50px;
     width: 80px;
     height: 30px;
     align-self: flex-end;
-    font-family: "Lora-Regular", sans-serif;
+    font-family: "Lora-SemiBoldItalic", sans-serif;
+    color: rgb(33, 150, 243);
+    transition: background-color 0.1s linear;
 }
-
+#submitBtn:active {
+    background-color: rgba(255, 255, 255, 0.671);
+}
 .form {
     width: 200px;
     position: relative;
@@ -546,6 +603,7 @@ margin-bottom: 30px;
 }
 
 .form input {
+    background-color: transparent;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -621,7 +679,7 @@ footer .Not_Idea a:hover{
 }
 
 
-@media(max-width: 940px) {
+@media screen and (min-width:481px) and (max-width: 1024px) {
     .Financial-content {
         display: flex;
         flex-direction: column;
@@ -629,11 +687,38 @@ footer .Not_Idea a:hover{
     }
     .input-And-Other-Info,
     .ticker-tech-analysis {
-    width: 340px;
+    width: 440px;
     border: 1px solid rgba(44, 44, 44, 0.3);
     border-radius: 5px;
-    -webkit-box-shadow: 4px 4px 10px 4px rgba(34, 60, 80, 0.23);
-    -moz-box-shadow: 4px 4px 10px 4px rgba(34, 60, 80, 0.23);
-    box-shadow: 4px 4px 10px 4px rgba(34, 60, 80, 0.23);
+    
+}
+}
+
+@media screen and (min-width: 381px) and (max-width: 480px) {
+    .Financial-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-And-Other-Info,
+    .ticker-tech-analysis {
+    width: 380px;
+    border: 1px solid rgba(44, 44, 44, 0.3);
+    border-radius: 5px;
+    
+}
+}
+@media screen and (max-width: 380px) {
+    .Financial-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .input-And-Other-Info,
+    .ticker-tech-analysis {
+    width: 310px;
+    border: 1px solid rgba(44, 44, 44, 0.3);
+    border-radius: 5px;
+    
 }
 }
